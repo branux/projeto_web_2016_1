@@ -1,0 +1,104 @@
+.contato{
+		background-color:#F0F0F0;
+		width:630px;
+		padding:20px;
+		font-family:"Arial", Gadget, sans-serif;
+		font-size:14px;
+		color:#2C1310;
+		padding-top:20px;	
+	}
+	
+	form{
+		width:620px;
+		margin-top:20px;
+		padding-top:40px;
+		background-color:#F0F0F0;
+		margin-bottom:10px;		
+	}
+	
+	form label{
+		display:block;
+		margin-bottom:10px;	
+		width:290px;
+	}
+	
+	form input{
+		width:280px;
+		height: 30px;
+		margin-bottom:8px;
+		font-size: 15px;
+	font-family:"Arial", Gadget, sans-serif;
+	}
+	
+	form input#enviar{
+		width:auto;
+		margin-left:0px;
+		width:100px;	
+	}
+	
+	form textarea{
+		width:590px;
+		height: 80px;
+		font-size: 15px;
+	font-family:"Arial", Gadget, sans-serif;
+	}
+	
+	form table{
+		margin-top:20px;	
+	}
+		
+	form option{
+		width:150px;
+		font-size:15px;	
+	}
+	
+	form select{
+		width:180px;
+		height:35px;
+		margin-bottom: 10px;
+		margin-top:10px;
+		font-size: 15px;
+	font-family:"Arial", Gadget, sans-serif;
+	}
+		
+	form .missao{
+		font-size:2px;
+		margin:0;
+		padding:0;
+	}
+	
+	form div{
+		margin-bottom:10px;
+		padding-left:3px;
+	}
+	
+	form #enviar{
+	margin-top:10px;		
+		margin-bottom:10px;
+		padding-left:3px;
+		margin-left:0px;
+	}
+	.legend{
+	font-size:20px;
+	padding-bottom:10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:16px;		
+	}
+	.fieldset{
+	border-style:dashed;
+	}
+	.checkbox{
+	margin-left:0px;
+	width:50px;	
+	}
+	
+	body{
+	margin:0;
+	padding:0;
+	}
+	
+	#principal{
+	width:670px;
+	float: left;
+	margin-right: 30px;
+	}

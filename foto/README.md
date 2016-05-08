@@ -1,0 +1,1 @@
+## diretório para as fotos
