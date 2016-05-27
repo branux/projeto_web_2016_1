@@ -7,7 +7,7 @@
     <body>
         <form id="form_cadastro" name="form_cadastro" action="veiculo/cadastrar" method="post">
             <label for="lbl_codigo">Código: </label>
-            <input type="text" readonly id="ipt_codigo" name="ipt_codigo"></input>
+            <input type="text" readonly id="ipt_codigo" name="ipt_codigo" disabled></input>
             <br/>
             <label for="lbl_tipo">Tipo: </label>
             <select id="slc_tipo" name="slc_tipo" required>

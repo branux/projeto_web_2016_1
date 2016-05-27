@@ -13,7 +13,7 @@
 class conection
 {//Depois tornar classe singleton
 
-    private $db_host = 'l ocalhost'; // servidor
+    private $db_host = 'localhost'; // servidor
     private $db_user = 'root'; // usuario do banco
     private $db_pass = ''; // senha do usuario do banco
     private $db_name = 'webapp_db'; // nome do banco

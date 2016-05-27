@@ -34,6 +34,7 @@ class VeiculoRepo
     {
         $sql = "SELECT * FROM veiculo";
         return $this->crud->query_db($sql);
+        //Fazer mapeamento dos objetos
     }
 
     public function insert()
