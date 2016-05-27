@@ -1,5 +1,4 @@
 <?php
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,33 +11,31 @@
  * @author linsmar
  */
 require_once 'conection.php';
-class Crud {
-   private $conn;
-   function __construct() {
-       $this->$conn = new conection();
-   }
+
+class Crud
+{
+
+    private $conn;
+
+    function __construct()
+    {
+        $this->$conn = new conection();
+    }
 
     //put your code here
-    public function select_db($script) {
-        
+    public function query_db($script)
+    {
+        $myConn = $this->conn->getConection();
+        return mysqli_query($myConn, $script);
     }
 
-    public function insert_db($script) {
+    public function execute_db($script)
+    {
         $this->conn->connect();
-        
-        
     }
 
-    public function update_db($script){
-        
-    }
-
-    public function delete_db($script) {
-        
-    }
-    
-    public static function get_Instance(){
+    public static function get_Instance()
+    {
         return new Crud();
     }
-
 }
