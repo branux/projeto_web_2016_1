@@ -3,10 +3,10 @@
 	if(isset($_POST["id"])){
 		$id = $_POST["id"];
 
-		$sqlupdate = "DELETE FROM despesa WHERE id= $id)";
+		$sqldelete = "DELETE FROM despesa WHERE id= $id)";
 
 
-		mysqli_query($con, $sqlupdate);
+		mysqli_query($con, $sqldelete);
 		
 	}
 
