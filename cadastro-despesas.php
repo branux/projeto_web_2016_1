@@ -50,6 +50,9 @@
                                                     <li><a href="cadastro-socioeconomico.php">Grupo Familiar</a></li>
                                                     <li><a href="cadastro_aluno.php">Dados da Criança</a></li>
                                                     <li><a href="cadastro_paimae.php">Pai/Mãe e Responsável</a></li>
+                                                    <li><a href="cadastro-imoveis.php">Imóveis</a></li>
+                                                    <li><a href="cadastro-veiculos.php">Veículos</a></li>
+                                                    <li><a href="cadastro-saude.php">Saúde</a></li>
                                                     <li class="active"><a href="cadastro-despesas.php">Despesas</a></li>
                                                 </ul>
                                             </div>

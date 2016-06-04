@@ -33,7 +33,7 @@
                             <a class="navbar-brand" href="#">Cadastro Socioeconômico</a>
                         </div>
                         <?php
-                            include("includes/menu_usuarios.php")
+                        include("includes/menu_usuarios.php")
                         ?>
                     </div>
                 </nav>
@@ -50,6 +50,9 @@
                                                     <li class="active"><a href="cadastro-socioeconomico.php">Grupo Familiar</a></li>
                                                     <li><a href="cadastro_aluno.php">Dados da Criança</a></li>
                                                     <li><a href="cadastro_paimae.php">Pai/Mãe e Responsável</a></li>
+                                                    <li><a href="cadastro-imoveis.php">Imóveis</a></li>
+                                                    <li><a href="cadastro-veiculos.php">Veículos</a></li>
+                                                    <li><a href="cadastro-saude.php">Saúde</a></li>
                                                     <li><a href="cadastro-despesas.php">Despesas</a></li>
                                                 </ul>
                                             </div>
@@ -57,226 +60,127 @@
                                     </div>
                                     <div class="tab-content">
                                         <div id="grupo" class="tab-pane fade in active">
-                                                <div class="content">
-                                                    <form action="?"  method="post">
+                                            <div class="content">
+                                                <form action="?"  method="post">
+                                                    <div class="row">
+                                                        <div class="col-sm-8 col-xs-8 form-inline">
+                                                            <label>Situação conjugal dos pais:</label><br>
+                                                            <label class="checkbox-inline">
+                                                                <input type="radio" name="situacao" value="1"> Casado
+                                                            </label>
+                                                            <label class="checkbox-inline">
+                                                                <input type="radio" name="situacao" value="1"> Solteiro
+                                                            </label>
+                                                            <label class="checkbox-inline">
+                                                                <input type="radio" name="situacao" value="1"> Outros
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-sm-4 col-xs-4">
+                                                            <div class="form-group">
+                                                                <label>Aluno reside com:</label><br>
+                                                                <input type="text" name="residencia" class="form-control border-input" >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-xs-12 form-inline">
+                                                            <label>Residência:</label><br>
+                                                            <label class="checkbox-inline">
+                                                                <input type="radio" name="situacao" value="1"> Própria
+                                                            </label>
+                                                            <label class="checkbox-inline">
+                                                                <input type="radio" name="situacao" value="1"> Alugada
+                                                            </label>
+                                                            <label class="checkbox-inline">
+                                                                <input type="radio" name="situacao" value="1"> Cedida
+                                                            </label>
+                                                            <label class="checkbox-inline">
+                                                                <input type="radio" name="situacao" value="1"> Financiada
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-4 col-xs-4">
+                                                            <div class="form-group">
+                                                                <label>Valor do Aluguel:</label><br>
+                                                                <input type="text" name="aluguel:" class="form-control border-input" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4 col-xs-4">
+                                                            <div class="form-group">
+                                                                <label>Valor da Prestação de Financiamento:</label><br>
+                                                                <input type="text" name="aluguel:" class="form-control border-input" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4 col-xs-4">
+                                                            <div class="form-group">
+                                                                <label>Propriedade cedida por:</label><br>
+                                                                <input type="text" name="proprietario" class="form-control border-input" >
+                                                            </div>
+                                                        </div>
+                                                    </div>                                                       
+                                                    <h4 class="title">
+                                                        Grupo Familiar
+                                                        <a href="#" id="add_familiar" class="btn-mais" title="Adicionar familiar">[+] Adicionar familiar</a>
+                                                    </h4>
+                                                    <br>
+                                                    <div id="familiar">
                                                         <div class="row">
-                                                            <div class="col-sm-8 col-xs-8 form-inline">
-                                                                <label>Situação conjugal dos pais:</label><br>
-                                                                <label class="checkbox-inline">
-                                                                    <input type="radio" name="situacao" value="1"> Casado
-                                                                </label>
-                                                                <label class="checkbox-inline">
-                                                                    <input type="radio" name="situacao" value="1"> Solteiro
-                                                                </label>
-                                                                <label class="checkbox-inline">
-                                                                    <input type="radio" name="situacao" value="1"> Outros
-                                                                </label>
-                                                            </div>
-                                                            <div class="col-sm-4 col-xs-4">
+                                                            <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                    <label>Aluno reside com:</label><br>
-                                                                    <input type="text" name="residencia" class="form-control border-input" >
+                                                                    <label>Nome Completo</label>
+                                                                    <input type="text" name="Nome" class="form-control border-input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label>Parentesco</label>
+                                                                    <input type="text" name="parentesco" class="form-control border-input" >
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <div class="form-group">
+                                                                    <label>Idade</label>
+                                                                    <input type="text" name="idade" class="form-control border-input" >
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="row">
-                                                            <div class="col-sm-12 col-xs-12 form-inline">
-                                                                <label>Residência:</label><br>
-                                                                <label class="checkbox-inline">
-                                                                    <input type="radio" name="situacao" value="1"> Própria
-                                                                </label>
-                                                                <label class="checkbox-inline">
-                                                                    <input type="radio" name="situacao" value="1"> Alugada
-                                                                </label>
-                                                                <label class="checkbox-inline">
-                                                                    <input type="radio" name="situacao" value="1"> Cedida
-                                                                </label>
-                                                                <label class="checkbox-inline">
-                                                                    <input type="radio" name="situacao" value="1"> Financiada
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-sm-4 col-xs-4">
+                                                            <div class="col-md-3">
                                                                 <div class="form-group">
-                                                                    <label>Valor do Aluguel:</label><br>
-                                                                    <input type="text" name="aluguel:" class="form-control border-input" >
+                                                                    <label>Escolaridade</label>
+                                                                    <input type="text" name="escolaridade" class="form-control border-input">
                                                                 </div>
                                                             </div>
-                                                            <div class="col-sm-4 col-xs-4">
+                                                            <div class="col-md-3">
                                                                 <div class="form-group">
-                                                                    <label>Valor da Prestação de Financiamento:</label><br>
-                                                                    <input type="text" name="aluguel:" class="form-control border-input" >
+                                                                    <label>Estado Civil</label>
+                                                                    <input type="text" name="estado_civil" class="form-control border-input">
                                                                 </div>
                                                             </div>
-                                                            <div class="col-sm-4 col-xs-4">
+                                                            <div class="col-md-3">
                                                                 <div class="form-group">
-                                                                    <label>Propriedade cedida por:</label><br>
-                                                                    <input type="text" name="proprietario" class="form-control border-input" >
+                                                                    <label>Cargo/Função</label>
+                                                                    <input type="text" name="cargo" class="form-control border-input">
                                                                 </div>
                                                             </div>
-                                                        </div>                                                       
-                                                        <h4 class="title">
-                                                            Grupo Familiar
-                                                            <a href="#" id="add_familiar" class="btn-mais" title="Adicionar familiar">[+] Adicionar familiar</a>
-                                                        </h4>
-                                                        <br>
-                                                        <div id="familiar">
-                                                            <div class="row">
-                                                                <div class="col-md-6">
-                                                                    <div class="form-group">
-                                                                        <label>Nome Completo</label>
-                                                                        <input type="text" name="Nome" class="form-control border-input">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-4">
-                                                                    <div class="form-group">
-                                                                        <label>Parentesco</label>
-                                                                        <input type="text" name="parentesco" class="form-control border-input" >
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <div class="form-group">
-                                                                        <label>Idade</label>
-                                                                        <input type="text" name="idade" class="form-control border-input" >
-                                                                    </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label>Renda(R$)</label>
+                                                                    <input type="text" name="renda" class="form-control border-input">
                                                                 </div>
                                                             </div>
-                                                            <div class="row">
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label>Escolaridade</label>
-                                                                        <input type="text" name="escolaridade" class="form-control border-input">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label>Estado Civil</label>
-                                                                        <input type="text" name="estado_civil" class="form-control border-input">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label>Cargo/Função</label>
-                                                                        <input type="text" name="cargo" class="form-control border-input">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label>Renda(R$)</label>
-                                                                        <input type="text" name="renda" class="form-control border-input">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="clearfix"></div>
                                                         </div>
-                                                        <h4 class="title">
-                                                            Imóveis Alugados:
-                                                            <a href="#" id="add_imovel" class="btn-mais" title="Adicionar imóvel">[+] Adicionar imóvel</a>
-                                                        </h4>
-                                                        <br>
-                                                        <div id="imovel">
-                                                            <div class="row">
-                                                                <div class="col-md-6">
-                                                                    <div class="form-group">
-                                                                        <label>Tipo do imóvel</label>
-                                                                        <input type="text" name="tipo_imovel" class="form-control border-input">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <div class="form-group">
-                                                                        <label>Quantidade</label>
-                                                                        <input type="text" name="quantidade" class="form-control border-input" >
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <div class="form-group">
-                                                                        <label>Valor do Aluguel(R$)</label>
-                                                                        <input type="text" name="valor_aluguel" class="form-control border-input" >
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="clearfix"></div>
-                                                        </div>
-                                                        <h4 class="title">
-                                                            Veículos:
-                                                            <a href="#" id="add_veiculo" class="btn-mais" title="Adicionar veículo">[+] Adicionar veículo</a>
-                                                        </h4>
-                                                        <br>
-                                                        <div id="veiculo">
-                                                            <div class="row">
-                                                                <div class="col-md-6">
-                                                                    <div class="form-group">
-                                                                        <label>Marca/Modelo</label>
-                                                                        <input type="text" name="veiculo" class="form-control border-input">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <div class="form-group">
-                                                                        <label>Ano de fabricação</label>
-                                                                        <input type="text" name="ano" class="form-control border-input" >
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <div class="form-group">
-                                                                        <label>Uso Comercial</label>
-                                                                        <input type="text" name="comercial" class="form-control border-input" >
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <div class="form-group">
-                                                                        <label>Uso Passeio</label>
-                                                                        <input type="text" name="passeio" class="form-control border-input" >
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="clearfix"></div>
-                                                        </div>
-                                                        <h4 class="title">
-                                                            Condições de Saúde:
-                                                            <a href="#" id="add_pessoa" class="btn-mais" title="Adicionar veículo">[+] Adicionar pessoa</a>
-                                                        </h4>
-                                                        <br>
-                                                        <div id="pessoa">
-                                                            <div class="row">
-                                                                <div class="col-md-5">
-                                                                    <div class="form-group">
-                                                                        <label>Nome</label>
-                                                                        <input type="text" name="nome_saude" class="form-control border-input">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label>Tipo de Doença</label>
-                                                                        <input type="text" name="tipo_saude" class="form-control border-input" >
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <div class="form-group">
-                                                                        <label>Medicação contínua</label>
-                                                                        <select name="medicao_saude" class="form-control border-input">
-                                                                            <option value="0">Não</option>
-                                                                            <option value="1">Sim</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <div class="form-group">
-                                                                        <label>Despesa Mensal(R$)</label>
-                                                                        <input type="text" name="despesa_saude" class="form-control border-input" >
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="clearfix"></div>
-                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
 
-                                                        <div class="row">
-                                                            <div class="col-sm-12 col-xs-12 text-right">
-                                                                <button class="btn btn-primary">Salvar</button>
-                                                            </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-xs-12 text-right">
+                                                            <button class="btn btn-primary">Salvar</button>
                                                         </div>
-                                                    </form>
-                                                </div>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
