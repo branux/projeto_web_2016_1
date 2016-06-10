@@ -44,6 +44,12 @@
                             </a>
                         </li>
                         <li>
+                            <a href="veiculos.php">
+                                <i class="ti-layout-list-thumb"></i>
+                                <p>Veiculos</p>
+                            </a>
+                        </li>
+                        <li>
                             <a href="ajuda.php">
                                 <i class="ti-help"></i>
                                 <p>Ajuda</p>
