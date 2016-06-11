@@ -13,49 +13,49 @@
                     </div>
 
                     <ul class="nav">
-                        <li class="active">
+                        <li id="menu-lateral-inicio" class="active">
                             <a href="index.php">
                                 <i class="ti-home"></i>
                                 <p>Início</p>
                             </a>
                         </li>
-                        <li>
+                        <li id="menu-lateral-prematricula">
                             <a href="pre-matricula.php">
                                 <i class="ti-user"></i>
                                 <p>Pré-Matrícula</p>
                             </a>
                         </li>
-                        <li>
+                        <li id="menu-lateral-cadastro">
                             <a href="cadastro-socioeconomico.php">
                                 <i class="ti-stamp"></i>
                                 <p>Cad. Socioeconômico<p>
                             </a>
                         </li>
-                        <li>
+                        <li id="menu-lateral-alunos">
                             <a href="alunos.php">
                                 <i class="ti-id-badge"></i>
                                 <p>Alunos</p>
                             </a>
                         </li>
-                        <li>
+                        <li id="menu-lateral-turmas">
                             <a href="turmas.php">
                                 <i class="ti-layout-list-thumb"></i>
                                 <p>Turmas</p>
                             </a>
-                        </li>
+                        </li id="menu-lateral-veiculos">
                         <li>
                             <a href="veiculos.php">
                                 <i class="ti-layout-list-thumb"></i>
                                 <p>Veiculos</p>
                             </a>
                         </li>
-                        <li>
+                        <li id="menu-lateral-ajuda">
                             <a href="ajuda.php">
                                 <i class="ti-help"></i>
                                 <p>Ajuda</p>
                             </a>
                         </li>
-                        <li>
+                        <li id="menu-lateral-sair">
                             <a href="sair.php">
                                 <i class="ti-arrow-left"></i>
                                 <p>Sair</p>

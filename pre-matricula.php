@@ -233,6 +233,7 @@
         <script type="text/javascript">
             $("[name='batizado']").bootstrapSwitch();
         </script>
+		<script>setAtivoMenuLateral("prematricula");</script>
 
     </body>
 

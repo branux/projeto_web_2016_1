@@ -9,17 +9,17 @@
         <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
         <title>Sistema de Matrícula</title>
         <?php
-        include("includes/head.php")
-        ?>
-
-    </head>
+			include("includes/head.php")
+		?>
+		
+	</head>
     <body>
-
+		
         <div class="wrapper">
             <?php
-            include("includes/lateral.php");
-            ?>
-
+				include("includes/lateral.php");
+			?>
+			
             <div class="main-panel">
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
@@ -29,19 +29,19 @@
                                 <span class="icon-bar bar1"></span>
                                 <span class="icon-bar bar2"></span>
                                 <span class="icon-bar bar3"></span>
-                            </button>
+							</button>
                             <a class="navbar-brand" href="#">Cadastro Socioeconômico</a>
-                        </div>
+						</div>
                         <?php
-                        include("includes/menu_usuarios.php")
-                        ?>
-                    </div>
-                </nav>
+							include("includes/menu_usuarios.php")
+						?>
+					</div>
+				</nav>
                 <div class="content">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-lg-12 col-md-12">
-
+								
                                 <div class="card">
                                     <div class="header">
                                         <div class="nav-tabs-navigation">
@@ -54,10 +54,10 @@
                                                     <li><a href="cadastro-veiculos.php">Veículos</a></li>
                                                     <li class="active"><a href="cadastro-saude.php">Saúde</a></li>
                                                     <li><a href="cadastro-despesas.php">Despesas</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+												</ul>
+											</div>
+										</div>
+									</div>
                                     <div class="tab-content">
                                         <div id="grupo" class="tab-pane fade in active">
                                             <div class="content">
@@ -65,7 +65,7 @@
                                                     <h4 class="title">
                                                         Condições de Saúde:
                                                         <a href="#" id="add_pessoa" class="btn-mais" title="Adicionar veículo">[+] Adicionar pessoa</a>
-                                                    </h4>
+													</h4>
                                                     <br>
                                                     <div id="pessoa">
                                                         <div class="row">
@@ -73,70 +73,71 @@
                                                                 <div class="form-group">
                                                                     <label>Nome</label>
                                                                     <input type="text" name="nome_saude" class="form-control border-input">
-                                                                </div>
-                                                            </div>
+																</div>
+															</div>
                                                             <div class="col-md-3">
                                                                 <div class="form-group">
                                                                     <label>Tipo de Doença</label>
                                                                     <input type="text" name="tipo_saude" class="form-control border-input" >
-                                                                </div>
-                                                            </div>
+																</div>
+															</div>
                                                             <div class="col-md-2">
                                                                 <div class="form-group">
                                                                     <label>Medicação contínua</label>
                                                                     <select name="medicao_saude" class="form-control border-input">
                                                                         <option value="0">Não</option>
                                                                         <option value="1">Sim</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
+																	</select>
+																</div>
+															</div>
                                                             <div class="col-md-2">
                                                                 <div class="form-group">
                                                                     <label>Despesa Mensal(R$)</label>
                                                                     <input type="text" name="despesa_saude" class="form-control border-input" >
-                                                                </div>
-                                                            </div>
-                                                        </div>
+																</div>
+															</div>
+														</div>
                                                         <div class="clearfix"></div>
-                                                    </div>
-
+													</div>
+													
                                                     <div class="row">
                                                         <div class="col-sm-12 col-xs-12 text-right">
                                                             <button class="btn btn-primary">Salvar</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
         <?php
-        include("includes/scripts.php");
-        ?>
+			include("includes/scripts.php");
+		?>
         <script type="text/javascript">
             $(document).ready(function () {
                 $("#add_familiar").click(function () {
                     $('#familiar').last().after($('#familiar').clone().prepend("<hr>"));
-                });
+				});
                 $("#add_imovel").click(function () {
                     $('#imovel').last().after($('#imovel').clone().prepend("<hr>"));
-                });
+				});
                 $("#add_veiculo").click(function () {
-                    $('#veiculo').last().after($('#veiculo').clone().prepend("<hr>"));
-                });
-                $("#add_pessoa").click(function () {
-                    $('#pessoa').last().after($('#pessoa').clone().prepend("<hr>"));
-                });
-            });
-        </script>
-
-    </body>
-
+					$('#veiculo').last().after($('#veiculo').clone().prepend("<hr>"));
+					$("#add_pessoa").click(function () {
+						$('#pessoa').last().after($('#pessoa').clone().prepend("<hr>"));
+					});
+				});
+			});
+		</script>
+		<script>setAtivoMenuLateral("cadastro");</script>
+		
+	</body>
+	
 </html>

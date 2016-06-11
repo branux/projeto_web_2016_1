@@ -50,7 +50,7 @@
         <?php
         include("includes/scripts.php");
         ?>
-
+		<script>setAtivoMenuLateral("sair");</script>
     </body>
 
 

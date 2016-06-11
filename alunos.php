@@ -134,7 +134,7 @@
         <?php
         include("includes/scripts.php");
         ?>
-        
+        <script>setAtivoMenuLateral("alunos");</script>
     </body>
 
 
