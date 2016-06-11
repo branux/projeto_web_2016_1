@@ -127,6 +127,7 @@
                 });
             });
         </script>
+		<script>setAtivoMenuLateral("cadastro");</script>
 
     </body>
 

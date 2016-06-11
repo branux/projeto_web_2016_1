@@ -181,6 +181,7 @@
             <?php
         include("includes/scripts.php");
         ?>
+		<script>setAtivoMenuLateral("turmas");</script>
 
     </body>
 

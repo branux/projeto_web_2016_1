@@ -51,6 +51,8 @@
         <?php
         include("includes/scripts.php");
         ?>
+		
+		<script>setAtivoMenuLateral("ajuda");</script>
     </body>
 
 </html>
