@@ -1,9 +1,13 @@
 <?php 
 
-	include "_conexao.php";
+	include "../../includes/_conexao.php";
+
+	include("../pessoa/inserir.php");
+
 	if(isset($_POST["nome"])){
 
 		# Aluno
+
 
 		$id_familia = $_POST["id_familia"];
 		$turno = $_POST["turno"];

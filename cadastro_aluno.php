@@ -64,7 +64,7 @@
                                                 <h4 class="title">Motivo da Solicitação</h4>
                                             </div>
                                             <div class="content">
-                                                <form action="?"  method="post">
+                                                <form action="controller/aluno/incluir.php"  method="post">
                                                     <div class="row">
                                                         <div class="col-sm-12 col-xs-12 form-inline">
                                                             <label class="checkbox-inline">
