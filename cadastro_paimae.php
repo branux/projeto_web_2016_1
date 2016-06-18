@@ -61,14 +61,21 @@
                                     <div class="tab-content">
                                         <div id="mae" class="tab-pane fade in active">
                                             <div class="header">
-                                                <h4 class="title">Dados da Mãe</h4>
+                                                <h4 class="title">Dados do Responsável</h4>
                                             </div>
                                             <form action="?"  method="post">
                                                 <div class="content">
-
                                                     <div class="row">
-                                                        <div class="col-sm-12 col-xs-12 form-inline">
-                                                            <label>Situação da Mãe</label><br>
+                                                        <div class="col-sm-3 col-xs-3">
+                                                            <label>Tipo</label>
+                                                            <select name="tipo" class="form-control border-input">
+                                                                <option value="1">Pai</option>
+                                                                <option value="2">Mãe</option>
+                                                                <option value="3">Responsável</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-9 col-xs-9 form-inline">
+                                                            <label>Situação do Responsável</label><br>
                                                             <label class="checkbox-inline">
                                                                 <input type="radio" name="situacao" value="1"> Presente
                                                             </label>
@@ -144,177 +151,39 @@
 
                                                 </div>
                                                 <hr>
-                                                <div class="header">
-                                                    <h4 class="title">Dados do Pai</h4>
-                                                </div>
-                                                <div class="content">
-                                                    <div class="row">
-                                                        <div class="col-sm-12 col-xs-12 form-inline">
-                                                            <label>Situação do Pai</label><br>
-                                                            <label class="checkbox-inline">
-                                                                <input type="radio" name="situacao" value="1"> Presente
-                                                            </label>
-                                                            <label class="checkbox-inline">
-                                                                <input type="radio" name="situacao" value="1"> Falecido
-                                                            </label>
-                                                            <label class="checkbox-inline">
-                                                                <input type="radio" name="situacao" value="1"> Separado
-                                                            </label>
-                                                            <label for="motivo" class="checkbox-inline">Outros</label>
-                                                            <div class="form-group">
-                                                                <input type="text" name="situacao" class="form-control border-input col-sm-2">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-sm-6 col-xs-6">
-                                                            <label for="nome">Nome</label>
-                                                            <input type="text" name="nome" class="form-control border-input">
-                                                        </div>
-                                                        <div class="col-sm-3 col-xs-3">
-                                                            <label for="certidao">CPF</label>
-                                                            <input type="text" name="certidao" class="form-control border-input">
-                                                        </div>
-                                                        <div class="col-sm-3 col-xs-3">
-                                                            <label for="matricula">Identidade</label>
-                                                            <input type="text" name="matricula" class="form-control border-input">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-sm-6 col-xs-6">
-                                                            <label for="endereco">Endereço</label>
-                                                            <input type="text" name="endereco" class="form-control border-input">
-                                                        </div>
-                                                        <div class="col-sm-2 col-xs-2">
-                                                            <label for="num">Número</label>
-                                                            <input type="text" name="num" class="form-control border-input">
-                                                        </div>
-                                                        <div class="col-sm-4 col-xs-4">
-                                                            <label for="bairro">Bairro</label>
-                                                            <input type="text" name="bairro" class="form-control border-input">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-sm-8 col-xs-8">
-                                                            <label for="ref">Ponto de Referência</label>
-                                                            <input type="text" name="ref" class="form-control border-input">
-                                                        </div>
-                                                        <div class="col-sm-4 col-xs-4">
-                                                            <label for="cep">CEP</label>
-                                                            <input type="text" name="cep" class="form-control border-input">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-sm-3 col-xs-3">
-                                                            <label for="tel">Telefone Residencial</label>
-                                                            <input type="text" name="tel" class="form-control border-input">
-                                                        </div>
-                                                        <div class="col-sm-3 col-xs-3">
-                                                            <label for="cel">Celular</label>
-                                                            <input type="text" name="cel" class="form-control border-input">
-                                                        </div>
-                                                        <div class="col-sm-4 col-xs-4">
-                                                            <label for="cidade">Cidade</label>
-                                                            <input type="text" name="cidade" class="form-control border-input">
-                                                        </div>
-                                                        <div class="col-sm-2 col-xs-2">
-                                                            <label for="estado">Estado</label>
-                                                            <input type="text" name="estado" class="form-control border-input">
-                                                        </div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-
-                                                </div>
-                                                <hr>
-                                                <div class="header">
-                                                    <h4 class="title">Dados do Responsável</h4>
-                                                </div>
-                                                <div class="content">
-                                                    <div class="row">
-                                                        <div class="col-sm-12 col-xs-12 form-inline">
-                                                            <label>Situação do Pai</label><br>
-                                                            <label class="checkbox-inline">
-                                                                <input type="radio" name="situacao" value="1"> Presente
-                                                            </label>
-                                                            <label class="checkbox-inline">
-                                                                <input type="radio" name="situacao" value="1"> Falecido
-                                                            </label>
-                                                            <label class="checkbox-inline">
-                                                                <input type="radio" name="situacao" value="1"> Separado
-                                                            </label>
-                                                            <label for="motivo" class="checkbox-inline">Outros</label>
-                                                            <div class="form-group">
-                                                                <input type="text" name="situacao" class="form-control border-input col-sm-2">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-sm-6 col-xs-6">
-                                                            <label for="nome">Nome</label>
-                                                            <input type="text" name="nome" class="form-control border-input">
-                                                        </div>
-                                                        <div class="col-sm-3 col-xs-3">
-                                                            <label for="certidao">CPF</label>
-                                                            <input type="text" name="certidao" class="form-control border-input">
-                                                        </div>
-                                                        <div class="col-sm-3 col-xs-3">
-                                                            <label for="matricula">Identidade</label>
-                                                            <input type="text" name="matricula" class="form-control border-input">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-sm-6 col-xs-6">
-                                                            <label for="endereco">Endereço</label>
-                                                            <input type="text" name="endereco" class="form-control border-input">
-                                                        </div>
-                                                        <div class="col-sm-2 col-xs-2">
-                                                            <label for="num">Número</label>
-                                                            <input type="text" name="num" class="form-control border-input">
-                                                        </div>
-                                                        <div class="col-sm-4 col-xs-4">
-                                                            <label for="bairro">Bairro</label>
-                                                            <input type="text" name="bairro" class="form-control border-input">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-sm-8 col-xs-8">
-                                                            <label for="ref">Ponto de Referência</label>
-                                                            <input type="text" name="ref" class="form-control border-input">
-                                                        </div>
-                                                        <div class="col-sm-4 col-xs-4">
-                                                            <label for="cep">CEP</label>
-                                                            <input type="text" name="cep" class="form-control border-input">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-sm-3 col-xs-3">
-                                                            <label for="tel">Telefone Residencial</label>
-                                                            <input type="text" name="tel" class="form-control border-input">
-                                                        </div>
-                                                        <div class="col-sm-3 col-xs-3">
-                                                            <label for="cel">Celular</label>
-                                                            <input type="text" name="cel" class="form-control border-input">
-                                                        </div>
-                                                        <div class="col-sm-4 col-xs-4">
-                                                            <label for="cidade">Cidade</label>
-                                                            <input type="text" name="cidade" class="form-control border-input">
-                                                        </div>
-                                                        <div class="col-sm-2 col-xs-2">
-                                                            <label for="estado">Estado</label>
-                                                            <input type="text" name="estado" class="form-control border-input">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-sm-12 col-xs-12 text-right">
-                                                            <button class="btn btn-primary">Salvar</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-
-                                                </div>
                                             </form>
 
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="card">
+                                                <div class="header">
+                                                    <h4 class="title">Cadastros</h4>
+                                                </div>
+                                                <div class="content table-responsive table-full-width">
+                                                    <table class="table table-striped">
+                                                        <thead>
+                                                        <th>Nome</th>
+                                                        <th>Tipo</th>
+                                                        <th>Situação</th>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><a href="#">José Oliveira Santos</a></td>
+                                                                <td>Pai</td>
+                                                                <td>Falecido</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a href="#">Maria Oliveira Santos</a></td>
+                                                                <td>Mãe</td>
+                                                                <td>Presente</td>
+                                                            </tr>
+                                                        </tbody>
+                                                        <div class="clearfix"></div>
+                                                    </table>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
