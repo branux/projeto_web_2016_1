@@ -1,6 +1,6 @@
 <?php 
 
-	include "../../includes/_conexao.php";
+	//include "../../includes/_conexao.php";
 
 	include("../pessoa/inserir.php");
 
@@ -8,24 +8,22 @@
 
 		# Aluno
 
+	$id_pessoa = mysqli_insert_id($con);
 
-		$id_familia = $_POST["id_familia"];
-		$turno = $_POST["turno"];
-		$classificacao = $_POST["classificacao"];
-		$certidao_de_nascimento = $_POST["certidao_de_nascimento"];
-		$matricula_prefeitura = $_POST["matricula_prefeitura"];
-		$religiao = $_POST["religiao"];
-		$batizado = $_POST["batizado"];
-		$id_pai = $_POST["id_pai"];
-		$id_mae = $_POST["id_mae"];
-		$url_foto = $_POST["url_foto"];
-		$ano_do_aluno = $_POST["ano_do_aluno"];
-		$id_responsavel = $_POST["id_responsavel"];
+	//$id_pessoa				= $_POST['id_pessoa'];
+	$turno					= $_POST['turno'];
+	$classificacao			= $_POST['classificacao'];
+	$certidao_de_nascimento	= $_POST['certidao_de_nascimento'];
+	$matricula				= $_POST['matricula'];
+	$religiao				= $_POST['religiao'];
+	$batizado				= $_POST['batizado'];
+	$ano_do_aluno			= $_POST['ano_do_aluno'];	
+	$grupo_familiar_id		= 1;//$_POST['grupo_familiar_id'];	
 
 		# obter o id já que o campo é auto_increment, para tabela especializada, aluno.
-		# $id_pessoa = mysqli_inset_id($con);
+		# $id_pessoa = mysqli_insert_id($con);
 
-		$sql = "INSERT INTO aluno (id_pessoa, id_familia, turno, classificacao, certidao_de_nascimento, matricula_prefeitura, religiao, batizado, id_pai, id_mae, url_foto, ano_do_aluno, id_responsavel) VALUES ($id_pessoa, $id_familia, $turno, $classificacao, $certidao_de_nascimento, $matricula_prefeitura, $religiao, $batizado, $id_pai, $id_mae, $url_foto, $ano_do_aluno, $id_responsavel);";
+		$sql = "INSERT INTO aluno (id_pessoa,turno,classificacao,certidao_de_nascimento,matricula, religiao, batizado, ano_do_aluno, grupo_familiar_id)VALUES ($id_pessoa, '$turno','$classificacao', '$certidao_de_nascimento', '$matricula', '$religiao', '$batizado', '$ano_do_aluno', '$grupo_familiar_id');";
 
 		mysqli_query($con, $sql);
 

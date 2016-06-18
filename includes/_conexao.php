@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = 'webaula_trab161';
-$password = 'aula161';
+$username = 'root';
+$password = '12345';
 $db = 'webaula_trabalhoweb';
 
 $con = new mysqli($servername, $username, $password, $db);
