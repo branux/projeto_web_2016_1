@@ -4,13 +4,14 @@
 
     if(isset($_POST['nome'])) {
 
-        $nome               = $POST['nome'];
-        $data_nascimento    = $POST['data_nascimento'];
-        $estado_civil       = $POST['estado_civil'];
-        $sexo               = $POST['sexo'];
+        $nome               = $_POST['nome'];
+        $data_nascimento    = $_POST['data_nascimento'];
+        $estado_civil       = $_POST['estado_civil'];
+        $sexo               = $_POST['sexo'];
 
 
-        $sql = "INSERT INTO pessoa (nome, data_nascimento, estado_civil, sexo) VALUES ('$nome', '$data_nascimento', '$estado_civil', '$sexo')"
+        $sql = "INSERT INTO pessoa (nome, data_nascimento, estado_civil, sexo) VALUES ('$nome', '$data_nascimento', '$estado_civil', '$sexo')";
+        echo "$sql";
 
         mysqli_query($con, $sql);
     }

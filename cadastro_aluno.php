@@ -82,6 +82,21 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    
+                                                    <div class="row">
+                                                    <div class="col-sm-4 col-xs-4">
+                                                    <label for="data_nascimento">Data Nascimento</label>
+                                                    <input type="date" name="data_nascimento" class="form-control border-input" required>
+                                                    </div>
+                                                    <div class="col-sm-4 col-xs-4">
+                                                    <label for="sexo">Sexo</label>
+                                                    <select name="sexo"  class="form-control border-input" required>
+                                                        <option value="">Selecione</option>
+                                                        <option value="M">Masculino</option>
+                                                        <option value="S">Feminino</option>
+                                                    </select>
+                                                    </div>
+                                                    </div>
                                                     <div class="row">
                                                         <div class="col-sm-2 col-xs-2">
                                                             <label for="matricula">Matrícula</label>
@@ -92,8 +107,8 @@
                                                             <input type="text" name="nome" class="form-control border-input">
                                                         </div>
                                                         <div class="col-sm-2 col-xs-2">
-                                                            <label for="ano">Ano em 2015</label>
-                                                            <input type="text" name="ano" class="form-control border-input">
+                                                            <label for="ano_do_aluno">Ano em 2015</label>
+                                                            <input type="text" name="ano_do_aluno" class="form-control border-input">
                                                         </div>
                                                     </div>
                                                     <div class="row">
@@ -104,15 +119,15 @@
                                                         <div class="col-sm-2 col-xs-2">
                                                             <label>Classificação</label><br>
                                                             <label class="checkbox-inline">
-                                                                <input type="radio" name="classi" value="vet"> Vet
+                                                                <input type="radio" name="classificacao" value="vet"> Vet
                                                             </label>
                                                             <label class="checkbox-inline">
-                                                                <input type="radio" name="classi" value="nov"> Nov
+                                                                <input type="radio" name="classificacao" value="nov"> Nov
                                                             </label>
                                                         </div>
                                                         <div class="col-sm-6 col-xs-6">
                                                             <label for="certidao">Certidão de Nascimento</label>
-                                                            <input type="text" name="certidao" class="form-control border-input">
+                                                            <input type="text" name="certidao_de_nascimento" class="form-control border-input">
                                                         </div>
                                                         <div class="col-sm-2 col-xs-2">
                                                             <label for="idade">Idade</label>
