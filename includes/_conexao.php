@@ -10,7 +10,7 @@ if (mysqli_connect_errno())
 {
 	echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }else{
-	echo "connect ok.";
+	//echo "connect ok.";
 }
 
 mysqli_set_charset($con,"utf8");

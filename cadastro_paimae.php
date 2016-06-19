@@ -6,7 +6,7 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script type='text/javascript' src='js/cep.js'></script>
 
     <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
@@ -68,11 +68,11 @@
                                         <div class="header">
                                             <h4 class="title">Dados do Responsável</h4>
                                         </div>
-                                        <form action="?"  method="post">
+                                        <form action="controller/familiar/inserir.php"  method="post" name="familiar">
                                             <div class="content">
                                                 <div class="row">
                                                     <div class="col-sm-3 col-xs-3">
-                                                        <label>Tipo</label>
+                                                        <label>Parentesco</label>
                                                         <select name="parentesco" class="form-control border-input" required>
                                                             <option value="">Selecione</option>
                                                             <?php 
@@ -88,17 +88,20 @@
                                                     <div class="col-sm-9 col-xs-9 form-inline">
                                                         <label>Situação do Responsável</label><br>
                                                         <label class="checkbox-inline">
-                                                            <input type="radio" name="situacao" value="1"> Presente
+                                                            <input type="radio" name="situacao"  onclick="document.familiar.situacao_descricao.disabled=true" value="1" checked> Presente
                                                         </label>
                                                         <label class="checkbox-inline">
-                                                            <input type="radio" name="situacao" value="1"> Falecido
+                                                            <input type="radio" name="situacao"  onclick="document.familiar.situacao_descricao.disabled=true" value="2"> Falecido
                                                         </label>
                                                         <label class="checkbox-inline">
-                                                            <input type="radio" name="situacao" value="1"> Separado
+                                                            <input type="radio" name="situacao"  onclick="document.familiar.situacao_descricao.disabled=true" value="3"> Separado
                                                         </label>
-                                                        <label for="motivo" class="checkbox-inline">Outros</label>
+                                                        <label class="checkbox-inline">
+                                                            <input type="radio" name="situacao"  onclick="document.familiar.situacao_descricao.disabled=false; document.familiar.situacao_descricao.focus();" value="4"> Outros
+                                                        </label>
+                                                        
                                                         <div class="form-group">
-                                                            <input type="text" name="situacao" class="form-control border-input col-sm-2">
+                                                            <input type="text" name="situacao_descricao" disabled="disabled" class="form-control border-input col-sm-2">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -133,8 +136,8 @@
                                                         <input type="text" name="certidao" class="form-control border-input">
                                                     </div>
                                                     <div class="col-sm-3 col-xs-3">
-                                                        <label for="matricula">Identidade</label>
-                                                        <input type="text" name="matricula" class="form-control border-input">
+                                                        <label for="rg">Identidade</label>
+                                                        <input type="text" name="rg" class="form-control border-input">
                                                     </div>
                                                 </div>
 
@@ -220,10 +223,10 @@
 
                                                 </div>
                                                 <div class="row">
-                                                        <div class="col-sm-12 col-xs-12 text-right">
-                                                            <button class="btn btn-primary">Salvar</button>
-                                                        </div>
+                                                    <div class="col-sm-12 col-xs-12 text-right">
+                                                        <button class="btn btn-primary">Salvar</button>
                                                     </div>
+                                                </div>
                                                 <div class="clearfix"></div>
 
                                             </div>
@@ -246,21 +249,41 @@
                                                         <th>Situação</th>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td><a href="#">José Oliveira Santos</a></td>
-                                                            <td>Pai</td>
-                                                            <td>Falecido</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><a href="#">Maria Oliveira Santos</a></td>
-                                                            <td>Mãe</td>
-                                                            <td>Presente</td>
-                                                        </tr>
-                                                    </tbody>
-                                                    <div class="clearfix"></div>
-                                                </table>
-                                            </div>
-                                        </div>
+
+
+
+
+
+                                                       <?php 
+                                                       include "includes/_conexao.php";
+                                                       $result_fm = mysqli_query($con, "select  p.nome, pt.descricao , f.situacao from familiar f inner join pessoa p on f.id_pessoa = p.id inner join parentesco pt on pt.id = f.id_parentesco");
+                                                       
+                                                       while($row_fm = mysqli_fetch_array($result_fm)){
+
+                                                        if($row_fm['situacao'] == 1)
+                                                            $situacao = 'Presente';
+                                                        else if($row_fm['situacao'] == 2)
+                                                            $situacao = 'Falecido';
+                                                        else if($row_fm['situacao'] == 3)
+                                                            $situacao = 'Separado';
+                                                        else
+                                                            $situacao = $row_fm['situacao'];
+
+
+                                                        echo "<tr>";
+                                                                //echo "<td><a href="#">row_fm[nome]</a></td>";
+                                                        echo '<td> <a href="#">'.$row_fm['nome'] ."</a></td>";
+                                                        echo "<td> ".$row_fm['descricao'] ."</td>";
+                                                        echo "<td> ".$situacao."</td>";
+                                                        echo "</tr>";
+                                                    }
+                                                    
+                                                    ?>
+
+                                                </tr>
+                                            </tbody>
+                                            <div class="clearfix"></div>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -270,27 +293,29 @@
             </div>
         </div>
     </div>
+</div>
+</div>
 
-    <?php
-    include("includes/scripts.php");
-    ?>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#add_familiar").click(function () {
-                $('#familiar').last().after($('#familiar').clone().prepend("<hr>"));
-            });
-            $("#add_imovel").click(function () {
-                $('#imovel').last().after($('#imovel').clone().prepend("<hr>"));
-            });
-            $("#add_veiculo").click(function () {
-                $('#veiculo').last().after($('#veiculo').clone().prepend("<hr>"));
-            });
-            $("#add_pessoa").click(function () {
-                $('#pessoa').last().after($('#pessoa').clone().prepend("<hr>"));
-            });
+<?php
+include("includes/scripts.php");
+?>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#add_familiar").click(function () {
+            $('#familiar').last().after($('#familiar').clone().prepend("<hr>"));
         });
-    </script>
-    <script>setAtivoMenuLateral("cadastro");</script>
+        $("#add_imovel").click(function () {
+            $('#imovel').last().after($('#imovel').clone().prepend("<hr>"));
+        });
+        $("#add_veiculo").click(function () {
+            $('#veiculo').last().after($('#veiculo').clone().prepend("<hr>"));
+        });
+        $("#add_pessoa").click(function () {
+            $('#pessoa').last().after($('#pessoa').clone().prepend("<hr>"));
+        });
+    });
+</script>
+<script>setAtivoMenuLateral("cadastro");</script>
 
 </body>
 
