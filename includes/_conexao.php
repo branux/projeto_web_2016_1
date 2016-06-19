@@ -13,4 +13,5 @@ if (mysqli_connect_errno())
 	echo "connect ok.";
 }
 
+mysqli_set_charset($con,"utf8");
 ?>
