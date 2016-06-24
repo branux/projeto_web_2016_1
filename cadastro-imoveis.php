@@ -61,7 +61,7 @@
                                     <div class="tab-content">
                                         <div id="grupo" class="tab-pane fade in active">
                                             <div class="content">
-                                                <form action="?"  method="post">
+                                                <form action="controller/imovel_alugado/inserir.php"  method="post">
                                                     <h4 class="title">
                                                         Imóveis Alugados:
                                                         <a href="#" id="add_imovel" class="btn-mais" title="Adicionar imóvel">[+] Adicionar imóvel</a>
@@ -72,7 +72,7 @@
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
                                                                     <label>Tipo do imóvel</label>
-                                                                    <input type="text" name="tipo_imovel" class="form-control border-input">
+                                                                    <input type="text" name="tipo" class="form-control border-input">
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-2">
@@ -84,7 +84,7 @@
                                                             <div class="col-md-2">
                                                                 <div class="form-group">
                                                                     <label>Valor do Aluguel(R$)</label>
-                                                                    <input type="text" name="valor_aluguel" class="form-control border-input" >
+                                                                    <input type="text" name="valor" class="form-control border-input" >
                                                                 </div>
                                                             </div>
                                                         </div>

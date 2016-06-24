@@ -250,15 +250,11 @@
                                                     </thead>
                                                     <tbody>
 
+                                                     <?php 
+                                                     include "includes/_conexao.php";
+                                                     $result_fm = mysqli_query($con, "select  p.nome, pt.descricao , f.situacao from familiar f inner join pessoa p on f.id_pessoa = p.id inner join parentesco pt on pt.id = f.id_parentesco");
 
-
-
-
-                                                       <?php 
-                                                       include "includes/_conexao.php";
-                                                       $result_fm = mysqli_query($con, "select  p.nome, pt.descricao , f.situacao from familiar f inner join pessoa p on f.id_pessoa = p.id inner join parentesco pt on pt.id = f.id_parentesco");
-                                                       
-                                                       while($row_fm = mysqli_fetch_array($result_fm)){
+                                                     while($row_fm = mysqli_fetch_array($result_fm)){
 
                                                         if($row_fm['situacao'] == 1)
                                                             $situacao = 'Presente';
@@ -269,15 +265,13 @@
                                                         else
                                                             $situacao = $row_fm['situacao'];
 
-
                                                         echo "<tr>";
-                                                                //echo "<td><a href="#">row_fm[nome]</a></td>";
                                                         echo '<td> <a href="#">'.$row_fm['nome'] ."</a></td>";
                                                         echo "<td> ".$row_fm['descricao'] ."</td>";
                                                         echo "<td> ".$situacao."</td>";
                                                         echo "</tr>";
                                                     }
-                                                    
+
                                                     ?>
 
                                                 </tr>
