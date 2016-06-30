@@ -18,3 +18,6 @@
     <script src="assets/js/demo.js"></script>
 	
 	<script type="text/javascript" src="js/menu-lateral.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.maskedinput.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.maskMoney.min.js"></script>
+	<script type="text/javascript" src="js/valida-lib.js"></script>

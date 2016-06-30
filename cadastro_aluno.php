@@ -64,7 +64,7 @@
                                                 <h4 class="title">Motivo da Solicitação</h4>
                                             </div>
                                             <div class="content">
-                                                <form action="controller/aluno/incluir.php"  method="post">
+                                                <form action="controller/aluno/incluir.php"  method="post" class="valida-form">
                                                     <div class="row">
                                                         <div class="col-sm-12 col-xs-12 form-inline">
                                                             <label class="checkbox-inline">
@@ -86,7 +86,7 @@
                                                     <div class="row">
                                                     <div class="col-sm-4 col-xs-4">
                                                     <label for="data_nascimento">Data Nascimento</label>
-                                                    <input type="date" name="data_nascimento" class="form-control border-input" required>
+                                                    <input type="date" name="data_nascimento" class="form-control border-input valida" val-tipo="data" val-obg="s">
                                                     </div>
                                                     <div class="col-sm-4 col-xs-4">
                                                     <label for="sexo">Sexo</label>
@@ -100,21 +100,21 @@
                                                     <div class="row">
                                                         <div class="col-sm-2 col-xs-2">
                                                             <label for="matricula">Matrícula</label>
-                                                            <input type="text" name="matricula" class="form-control border-input">
+                                                            <input type="text" name="matricula" class="form-control border-input valida" val-tipo="inteiro" val-obg="s">
                                                         </div>
                                                         <div class="col-sm-8 col-xs-8">
                                                             <label for="nome">Nome</label>
-                                                            <input type="text" name="nome" class="form-control border-input">
+                                                            <input type="text" name="nome" class="form-control border-input valida" val-tipo="frase" val-obg="s">
                                                         </div>
                                                         <div class="col-sm-2 col-xs-2">
                                                             <label for="ano_do_aluno">Ano em 2015</label>
-                                                            <input type="text" name="ano_do_aluno" class="form-control border-input">
+                                                            <input type="text" name="ano_do_aluno" class="form-control border-input valida" val-tipo="inteiro" val-obg="s">
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-sm-2 col-xs-2">
                                                             <label for="turno">Turno</label>
-                                                            <input type="text" name="turno" class="form-control border-input">
+                                                            <input type="text" name="turno" class="form-control border-input valida" val-tipo="palavra" val-obg="s">
                                                         </div>
                                                         <div class="col-sm-2 col-xs-2">
                                                             <label>Classificação</label><br>
@@ -127,11 +127,11 @@
                                                         </div>
                                                         <div class="col-sm-6 col-xs-6">
                                                             <label for="certidao">Certidão de Nascimento</label>
-                                                            <input type="text" name="certidao_de_nascimento" class="form-control border-input">
+                                                            <input type="text" name="certidao_de_nascimento" class="form-control border-input valida" val-tipo="frase" val-obg="s">
                                                         </div>
                                                         <div class="col-sm-2 col-xs-2">
                                                             <label for="idade">Idade</label>
-                                                            <input type="text" name="idade" class="form-control border-input">
+                                                            <input type="text" name="idade" class="form-control border-input valida" val-tipo="inteiro" val-obg="s">
                                                         </div>
                                                     </div>
                                                     <div class="row">

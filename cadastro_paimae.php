@@ -68,7 +68,7 @@
                                         <div class="header">
                                             <h4 class="title">Dados do Responsável</h4>
                                         </div>
-                                        <form action="controller/familiar/inserir.php"  method="post" name="familiar">
+                                        <form action="controller/familiar/inserir.php"  method="post" name="familiar" class="valida-form">
                                             <div class="content">
                                                 <div class="row">
                                                     <div class="col-sm-3 col-xs-3">
@@ -111,7 +111,7 @@
                                                 <div class="row">
                                                     <div class="col-sm-4 col-xs-4">
                                                         <label for="data_nascimento">Data Nascimento</label>
-                                                        <input type="date" name="data_nascimento" class="form-control border-input" required>
+                                                        <input type="date" name="data_nascimento" class="form-control border-input valida" val-tipo="data" val-obg="s">
                                                     </div>
                                                     <div class="col-sm-4 col-xs-4">
                                                         <label for="sexo">Sexo</label>
@@ -129,37 +129,37 @@
                                                 <div class="row">
                                                     <div class="col-sm-6 col-xs-6">
                                                         <label for="nome">Nome</label>
-                                                        <input type="text" name="nome" class="form-control border-input">
+                                                        <input type="text" name="nome" class="form-control border-input valida" val-tipo="frase" val-obg="s">
                                                     </div>
                                                     <div class="col-sm-3 col-xs-3">
                                                         <label for="certidao">CPF</label>
-                                                        <input type="text" name="certidao" class="form-control border-input">
+                                                        <input type="text" name="certidao" class="form-control border-input valida" val-tipo="cpf" val-obg="s">
                                                     </div>
                                                     <div class="col-sm-3 col-xs-3">
                                                         <label for="rg">Identidade</label>
-                                                        <input type="text" name="rg" class="form-control border-input">
+                                                        <input type="text" name="rg" class="form-control border-input valida" val-tipo="palavra" val-obg="s">
                                                     </div>
                                                 </div>
 
                                                 <div class="row">
                                                     <div class="col-sm-4 col-xs-4">
                                                         <label for="cep">CEP</label>
-                                                        <input type="text" name="cep" id="cep" class="form-control border-input">
+                                                        <input type="text" name="cep" id="cep" class="form-control border-input valida" val-tipo="cep" val-obg="s">
                                                     </div>
                                                     <div class="col-sm-6 col-xs-6">
                                                         <label for="logradouro">Logradouro</label>
-                                                        <input type="text" name="logradouro" id="logradouro" class="form-control border-input">
+                                                        <input type="text" name="logradouro" id="logradouro" class="form-control border-input valida" val-tipo="frase" val-obg="s">
                                                     </div>
                                                     <div class="col-sm-2 col-xs-2">
                                                         <label for="num">Número</label>
-                                                        <input type="text" name="numero" id="numero" class="form-control border-input">
+                                                        <input type="text" name="numero" id="numero" class="form-control border-input valida" val-tipo="palavra" val-obg="s">
                                                     </div>
                                                 </div>
 
                                                 <div class="row">
                                                     <div class="col-sm-4 col-xs-4">
                                                         <label for="bairro">Bairro</label>
-                                                        <input type="text" name="bairro" id="bairro" class="form-control border-input">
+                                                        <input type="text" name="bairro" id="bairro" class="form-control border-input valida" val-tipo="frase" val-obg="s">
                                                     </div>
                                                     <div class="col-sm-8 col-xs-8">
                                                         <label for="ref">Ponto de Referência</label>
@@ -173,11 +173,11 @@
                                                 <div class="row">
                                                     <div class="col-sm-3 col-xs-3">
                                                         <label for="tel">Telefone Residencial</label>
-                                                        <input type="text" name="tel" class="form-control border-input">
+                                                        <input type="text" name="tel" class="form-control border-input valida" val-tipo="telefone" val-obg="s">
                                                     </div>
                                                     <div class="col-sm-3 col-xs-3">
                                                         <label for="cel">Celular</label>
-                                                        <input type="text" name="cel" class="form-control border-input">
+                                                        <input type="text" name="cel" class="form-control border-input valida" val-tipo="telefone" val-obg="s">
                                                     </div>
 
 

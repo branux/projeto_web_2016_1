@@ -17,3 +17,5 @@
         <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
         <link href="assets/css/themify-icons.css" rel="stylesheet">
         <link href="assets/css/estilos.css" rel="stylesheet">
+		
+		<link href="css/valida-lib.css" rel="stylesheet">
